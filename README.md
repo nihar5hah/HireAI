@@ -50,17 +50,17 @@ HireAI is a modern hiring platform that uses **AI to generate tailored technical
 ### Landing Page
 Professional hero section with compelling messaging and immediate call-to-action.
 
-![Landing Page](/screenshots/landing-page.png)
+![Landing Page](frontend/public/screenshots/landing-page.png)
 
 ### Recruiter Dashboard
 Complete hiring workflow with assessment management, candidate tracking, and key metrics at a glance.
 
-![Recruiter Dashboard](/screenshots/recruiter-dashboard.png)
+![Recruiter Dashboard](frontend/public/screenshots/recruiter-dashboard.png)
 
 ### Candidate Portal
 Intuitive interface for candidates to upload resumes, take assessments, and view detailed results.
 
-![Candidate Dashboard](/screenshots/candidate-dashboard.png)
+![Candidate Dashboard](frontend/public/screenshots/candidate-dashboard.png)
 
 ---
 
