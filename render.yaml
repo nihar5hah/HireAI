@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: ai-hiring-backend
+    buildCommand: cd backend && npm install && npm run build
+    startCommand: cd backend && npm start
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
