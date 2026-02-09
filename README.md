@@ -1,52 +1,141 @@
-# AI Hiring Assessment Platform
+# 🎯 HireAI
 
-An AI-powered hiring assessment platform that generates tailored technical assessments from job descriptions, evaluates candidates automatically, and provides detailed performance analytics.
+> **AI-Powered Technical Hiring Platform**  
+> Generate smart assessments instantly. Evaluate candidates fairly. Hire confidently.
 
-## Tech Stack
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black)](https://nextjs.org/)
 
-- **Frontend:** Next.js 15 (App Router), Tailwind CSS, ShadCN UI
-- **Backend:** Node.js, Express, TypeScript
-- **Database:** SQLite (via better-sqlite3)
+---
 
-## Features
+## ✨ What is HireAI?
 
-- **Recruiter Dashboard** (`/recruiter`) — Paste a job description, AI extracts skills and generates 8 assessment questions (5 MCQs, 2 subjective, 1 coding)
-- **Candidate Assessment** (`/assessment`) — Timed 30-minute assessment with MCQ, subjective, and coding sections
-- **Results & Leaderboard** (`/results`) — Detailed score breakdown, skill-wise performance bars, and candidate rankings
+HireAI is a modern hiring platform that uses **AI to generate tailored technical assessments** from job descriptions. Recruiters save hours creating tests, candidates get fair evaluations, and you get data-driven hiring decisions—all in minutes.
 
-## Getting Started
+**2-minute setup • No credit card • Industry-leading accuracy**
 
-### Backend
+---
 
-1. Create a `.env` file in the `backend` folder with your **Groq** API key (FREE):
+## 🚀 Key Features
 
-```
-GROQ_API_KEY=gsk_your-api-key-here
-```
+### 📋 Smart Assessment Generation
+- Paste a job description → AI extracts required skills
+- Auto-generates 8 diverse questions (MCQs, subjective, coding)
+- Questions adapt to role complexity
+- Completely free (powered by Groq AI)
 
-Get your free key at [Groq Console](https://console.groq.com) — no credit card required.
+### 📊 Real-Time Candidate Evaluation
+- 30-minute timed assessments
+- Instant AI scoring across multiple dimensions
+- Skill-wise performance breakdown
+- Automated candidate ranking with leaderboards
 
-2. Start the server:
+### 👥 Recruiter Dashboard
+- Create unlimited assessments
+- Track all candidates in one place
+- Export results and reports
+- Team collaboration features
 
-```bash
-cd backend
-npm install
-npm run dev
-```
+### 🔐 Enterprise-Grade Security
+- OAuth 2.0 Google authentication
+- Password-protected accounts
+- Encrypted data storage
+- GDPR and privacy-compliant
 
-Runs on http://localhost:3002 (questions generated via Groq AI — free, unique each time)
+---
 
-### Frontend
+## 🎬 Screenshots
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
+### Landing Page
+Professional hero section with compelling messaging and immediate call-to-action.
 
-Runs on http://localhost:3000
+![Landing Page](/screenshots/landing-page.png)
 
-## API Endpoints
+### Recruiter Dashboard
+Complete hiring workflow with assessment management, candidate tracking, and key metrics at a glance.
+
+![Recruiter Dashboard](/screenshots/recruiter-dashboard.png)
+
+### Candidate Portal
+Intuitive interface for candidates to upload resumes, take assessments, and view detailed results.
+
+![Candidate Dashboard](/screenshots/candidate-dashboard.png)
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| **Frontend** | Next.js 15, React 19, TypeScript, Tailwind CSS, ShadCN UI |
+| **Backend** | Node.js, Express, TypeScript |
+| **Database** | Supabase (PostgreSQL) |
+| **Auth** | OAuth 2.0 (Google), Custom JWT |
+| **AI** | Groq API (free, no credit card) |
+| **Deployment** | Vercel (Frontend), Render (Backend) |
+| **Storage** | Supabase Storage (Resume uploads) |
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+- Free Groq API key ([Get one here](https://console.groq.com))
+- Supabase account ([Sign up free](https://supabase.com))
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/nihar5hah/HireAI.git
+   cd HireAI
+   ```
+
+2. **Set up Backend**
+   ```bash
+   cd backend
+   npm install
+   ```
+   
+   Create `.env`:
+   ```env
+   GROQ_API_KEY=gsk_your-api-key-here
+   SUPABASE_URL=https://your-project.supabase.co
+   SUPABASE_SERVICE_KEY=your-service-key
+   JWT_SECRET=your-jwt-secret
+   ```
+   
+   Start:
+   ```bash
+   npm run dev
+   ```
+   → Runs on http://localhost:3002
+
+3. **Set up Frontend**
+   ```bash
+   cd frontend
+   npm install
+   ```
+   
+   Create `.env.local`:
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+   NEXT_PUBLIC_API_URL=http://localhost:3002
+   ```
+   
+   Start:
+   ```bash
+   npm run dev
+   ```
+   → Opens on http://localhost:3000
+
+---
+
+## 📚 API Endpoints
 
 - `POST /api/jobs` — Create a job and generate assessment questions
 - `GET /api/jobs` — List all jobs
